@@ -17,7 +17,7 @@ $(document).ready(function(){
         $(".dni").val(dni);
         $(".direccion").val(direccion);
         $(".telefono").val(telefono);
-        $(".localidad_provincia").val(localidad);
+        $(".localidad").val(localidad);
         $(".cp").val(cp);
         $(".email").val(email);
         $(".fn").val(fn);

@@ -93,10 +93,10 @@ body{
     display: none;
 }
 
-.page-footer{
+/* .page-footer{
     position: relative;
     width: 100%;
-}
+} */
 
 .container-body{
    margin-top: 10px;
@@ -107,6 +107,7 @@ body{
 
 .page-footer{
     background-color: darkgrey;
+   
 }
 
 

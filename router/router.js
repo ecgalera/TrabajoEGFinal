@@ -37,8 +37,8 @@ router.post("/save", (req,res)=>{
         direccion:  req.body.direccion,
         telefono:   req.body.telefono,
         localidad:  req.body.localidad,
-        cp:         req.body. cp,
-        email:      req.body. email,
+        cp:         req.body.cp,
+        email:      req.body.email,
         fn:         req.body.fn,
     }
     let sql = "INSERT INTO datosclientes SET ?";
