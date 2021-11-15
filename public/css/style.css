@@ -9,7 +9,8 @@
     flex-direction: column;
     width: 100%;
     align-items:center;
-    padding-top: 5rem;
+    justify-content: center;
+    padding-top: 4rem;
     font-size: larger;
     
 }
@@ -43,13 +44,15 @@ select{
    justify-content:end ;
    border-radius: 5px;
 }
+
 legend{
+    display: block;
     font-weight: bolder;
     color: white;
     background-color: black;
-    padding:0.7rem;
+    padding:0.5rem;
     border: solid 2px black;
-    width: 70%;
+    width: 100%;
     border-radius: 7px;
 }
 
@@ -58,24 +61,24 @@ legend{
 }
 
 fieldset{
-   padding: 3rem;
+   
+   width: 40%;
+   padding: 2rem;
    background-color: rgb(228, 236, 247);
    border: solid black 3px;
    
 }
 
 .button-submit{
-    display: flex;
-    justify-content:center;
+    border-radius: 5px;
     width: 10rem;
     color: white;
     background-color: black;
-    padding: 1.5rem;
-    justify-content: center;
-    align-items: center;
+    padding: 0.8rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
     font-weight: bolder;
+    margin-bottom: 3rem;
     
 }
 
@@ -99,10 +102,12 @@ fieldset{
         width: 10rem;
         height:1.5rem;
         border-radius: 5px;
+        font-size: smaller;
     }
 
     fieldset{
         padding: 0.5rem;
+        width: 100%;
      }
 
      .container_h1{
@@ -130,12 +135,21 @@ fieldset{
 
     fieldset{
         padding: 0.5rem;
+        width: 80%;
      }
 
      .container_h1{
         font-size: small;
         
     }
+
+    input{
+       
+     font-size: smaller;
+    }
     
+    span{
+        font-size: medium;
+    }
     
 }
