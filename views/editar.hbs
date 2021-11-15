@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/f1f8a31ad6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/custon.css">
+    <link rel="stylesheet" href="style.css">
     <title>Adminitración</title>
 </head>
 <body>
-    
+     {{!-- HEADER  --}}
+   
+    {{>header}}
+
+    <!-- / HEADER -->
+
+
+
+
+
     <div class="container p-1">
         <h2 class="mb-4">Listado de Clientes</h2>
 
@@ -141,9 +153,11 @@
 </div>
 </form>
 
+<!-- FOOTER -->
+   
+  {{>footer}}
 
-
-
+  <!-- Footer -->
 
 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -154,5 +168,6 @@
          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
  <script src="/js/bootstrap.min.js"></script>
  <script src="/js/modal.js"></script>
+ <script src="/index.js"></script>
 </body>
 </html>

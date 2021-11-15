@@ -1,0 +1,204 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    padding: 90px 0px 0;/* así dejo el body fijo le resto el padding al header*/
+}
+
+.header{
+    background-color: rgb(31, 31, 63);
+    height: 100px;
+    position: fixed; /* lo dejo fijo desacoplado del resto, este elemento no ocupa ningun espacio en el cuerpo de la pagína
+     le aplico un padding al body */
+    width: 100%;
+    top:0;
+    left: 0;
+    
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px; /* el 0 es arriba y abajo y 40px izquierda y derecha    */
+    line-height: 80px; /* esto es como el height: 80px* el alto de linea es igual al alto del header */
+}
+
+.nav-menu{
+    display: flex;
+    /*  le pongo el mismo padding que al logo  */
+    margin-right: 40px;
+    /* le saco los puntitos al menu */
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    /* paso el texto a mayusculas  */
+    text-transform: uppercase;
+    /* para que no corte el contenido SOBRE MI cuando se pasa para el renglon de abajo MI cuando se hace repunsivo */
+    width: max-content;
+
+}
+
+.nav-menu-link:hover{
+    background-color: #f54028;
+    transition: .5s;
+   
+}
+
+.nav-menu-link_visible{
+    background-color: #034574;
+    transition: .5s;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius:5px;
+    /* le ponemos una transición para el efecto del hover */
+    
+}
+
+.nav-toggle{
+    color: white;
+    /* le quito los estilos propios al boton */
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+     /* le pongo 60px porque cuando este en modo navegador la linea baja de 80 a 60px  */
+    line-height: 60px;
+    /* para que no se vea cuando estamos en dispositivos de escritorio */
+    /* le pone la manito al puntero  */
+    cursor:pointer;
+
+    display: none;
+}
+
+.page-footer{
+    position: relative;
+    width: 100%;
+}
+
+.container-body{
+   margin-top: 10px;
+    /* background-color: #57ce67;
+    height: calc(100vh - 100px - 420px);
+    width: 100%; */
+}
+
+.page-footer{
+    background-color: darkgrey;
+}
+
+
+
+/* creamos una media query para los dispositvos chicos */
+
+@media( max-width: 768px){
+    body{
+        font-family: sans-serif;
+        padding-top: 70px;/* cambio de 90 a 70px*/
+    }
+    
+    .header{
+        background-color: rgb(31, 31, 63);
+        /* Cambio en la @media de 80 a 60 px */
+        height: 60px;
+        position: fixed; /* lo dejo fijo desacoplado del resto, este elemento no ocupa ningun espacio en el cuerpo de la pagína
+         le aplico un padding al body */
+        width: 100%;
+        top:0;
+        left: 0;
+    
+    }
+    
+        
+    .logo{
+        /* cambio a una fuente mas chica de 30 a 25px */
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0 20px; /* el 0 es arriba y abajo y 40px izquierda y derecha    */
+        /* cambio para la @media de 80 a 60px */
+        line-height: 60px; /* esto es como el height: 80px* el alto de linea es igual al alto del header */
+    }
+    
+    .nav-menu{
+        display: flex;
+        /* ahora en la media el menu esta en columna cuando se achique */
+        flex-direction: column;
+        /*  le pongo el mismo padding que al logo  */
+        align-items: center;
+        margin-right: 20px;
+        /* le saco los puntitos al menu */
+        list-style: none;
+        background-color: #034574;
+        /* position arranca desde aca hasta width */
+        position: fixed;
+        left:0;
+        top:60px;
+        width:100%;
+        padding:20px 0;
+        /* tamaño que quiera que tenga mi elemento 100% menos los 60px del logo cuando se necesite una barra de scroll la agrega automaticamente */
+        height: calc(100%-60px);
+        overflow-y:auto;
+
+        left:100%;
+        transition: 0.3s;
+
+    }
+    
+    .nav-menu-item{
+       
+        line-height: 70px;
+           
+    }
+    
+    .nav-menu-link:hover {
+        background: none;
+        color:#83c5f7
+       
+    }
+    
+    .nav-menu-link_active {
+        background: none;
+        color:#83c5f7
+       
+    }
+
+    .nav-menu-link{
+        padding: 8px 12px;
+        border-radius:5px;
+        /* le ponemos una transición para el efecto del hover */
+        
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .nav-menu_visible{
+        left: 0;
+
+    }
+    /* Para cuando navegas con el tabulador te lo marque  */
+    .nav-toggle:focus:not(:focus-visible){
+        outline:none;
+    }
+}

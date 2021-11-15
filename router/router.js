@@ -5,8 +5,14 @@ const router = express.Router();
 // Conexión a la Base de Datos 
 const connection = require("../database/db");
 
+
+router.get("/home", (req, res)=>{
+    res.render("home")
+});
+
+
 // Select
-router.get("/", (req, res)=>{
+router.get("/admin", (req, res)=>{
     let sql = "SELECT * FROM datosclientes";
     let query = connection.query(sql, (err, results)=>{
         if(err) throw err;
