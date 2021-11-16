@@ -12,18 +12,22 @@ router.get("/home", (req, res)=>{
 
 
 // Select
-router.get("/admin", (req, res)=>{
-    let sql = "SELECT * FROM datosclientes";
-    let query = connection.query(sql, (err, results)=>{
-        if(err) throw err;
-        res.render("admin", {
-            results:results
-        })
-    })
-})
+// router.get("/admin", (req, res)=>{
+//     let sql = "SELECT * FROM datosclientes";
+//     let query = connection.query(sql, (err, results)=>{
+//         if(err) throw err;
+//         res.render("admin", {
+//             results:results
+//         })
+//     })
+// })
 
 
 // Insert
+router.get("/registroOK",(req,res)=>{
+    res.render("registroOK")
+})
+
 router.get("/registrarse",(req,res)=>{
     res.render("registrarse")
 })
@@ -44,7 +48,7 @@ router.post("/save", (req,res)=>{
     let sql = "INSERT INTO datosclientes SET ?";
     let query = connection.query(sql, data, (err, results)=>{
         if(err) throw err;
-        res.redirect("/home");
+        res.redirect("/registroOK");
     })
 
 

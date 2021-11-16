@@ -15,6 +15,11 @@ cards.addEventListener("click", e=>{
     addCarrito(e) 
 })
 
+items.addEventListener("click", e =>{
+    btnAumentarDisminuir(e)
+})
+
+
 const fetchData = async()=>{
     try{
         const res = await fetch("api.json")
@@ -145,3 +150,5 @@ const btnAumentarDisminuir = e => {
     e.stopPropagation()
 }
     
+
+
