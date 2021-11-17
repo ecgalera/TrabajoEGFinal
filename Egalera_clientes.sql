@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2021 a las 19:31:14
+-- Tiempo de generación: 17-11-2021 a las 22:26:58
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -45,7 +45,32 @@ CREATE TABLE `datosclientes` (
 --
 
 INSERT INTO `datosclientes` (`id`, `nombre`, `apellido`, `dni`, `direccion`, `telefono`, `localidad`, `cp`, `email`, `fn`) VALUES
-(0, 'Eduardo', 'Galera', 20749712, 'Teruel 451', 2147483647, 'Villa Allende', 5105, 'galera.eduardo@gmail.com', 1969);
+(1, 'Eduardo', 'Galera', 20749712, 'Teruel 451', 2147483647, 'Villa Allende', 5105, 'galera.eduardo@gmail.com', 1969),
+(2, 'Juan', 'Perez', 23456789, 'Ituzaingo 456', 11456782, 'Villa María Córdoba', 5105, 'jp@hootmail.com', 1989),
+(3, 'Carolina', 'Gomez', 9567890, 'Manuel Estrada 456 Piso 12 Apto B', 2147483647, 'Santa Fe Capital', 4105, 'cg@yahoo.com.ar', 1999),
+(5, 'Carolina', 'Hernandez', 21345678, 'Manuel Estrada 456 ', 2147483647, 'Santa Fe Capital', 4105, 'cg@yahoo.com.ar', 1999),
+(7, 'SofIa', 'Perez', 20749712, 'Teruel 451', 2147483647, 'Villa Allende', 5105, 'sh@ccyi.com.ar', 1998),
+(9, 'Miguel ', 'Caballero ', 1956780, 'Oncativo 345', 2345678, 'Ticino Santa María', 6000, 'caballero@adinet.com.uy', 2003);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `datosclientes`
+--
+ALTER TABLE `datosclientes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `datosclientes`
+--
+ALTER TABLE `datosclientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
