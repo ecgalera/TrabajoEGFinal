@@ -18,3 +18,5 @@ El sitio tiene la siguiente estructura:
                                       - sector privado --> crud
 
 Todo el sitio es responsive desing, a traves de Bootstrap y utlizando Media Query CSS.
+
+Agrego el proyecto preliminar en Heroku: https://proyectofinal2510.herokuapp.com/ 
